@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.I.A.A</title>
+    
+    <link rel="stylesheet" type="text/css" href="basic.css">
+    <link rel="stylesheet" type="text/css" href="apparel.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('distort.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+            position: relative; 
+        }
+
+    
+        #header-wrapper {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        #header-wrapper h1 {
+            margin: 0;
+            font-size: 1.6em;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #header-wrapper a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #header-wrapper a:hover {
+            text-decoration: underline;
+        }
+
+        #header-wrapper img {
+            height: 60px;
+            width: auto;
+            margin-left: 15px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-buttons a {
+            text-decoration: none;
+            font-size: 1.1em;
+            color: white;
+            background-color: #555;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 2px solid #fff;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .header-buttons a:hover {
+            transform: scale(1.05);
+            background-color: #888;
+        }
+
+        /* Main content styles */
+        #container {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #subheader h2 {
+            font-size: 2.5em;
+            color: #444;
+            font-weight: bold;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .entry {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+.clothing-gallery {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    padding: 20px;
+}
+
+
+        
+        .clothing-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.5em;
+            text-align: center;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 750px;
+            border: 3px solid #333;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .clothing-item img {
+            width: 80%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+      
+        .navigation-buttons {
+            margin-top: 20px;
+        }
+
+        .nav-btn {
+            padding: 15px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.75em; 
+            margin: 0 10px;
+            width: 100px;
+            height: 50px;
+        }
+
+        .nav-btn:hover {
+            background-color: #444;
+        }
+
+ 
+        .clothing-description {
+            max-width: 500px;
+            font-size: 1.2em;
+            color: #444;
+            line-height: 1.8;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+        }
+
+       
+        .size-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .size-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #f1f1f1;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .size-btn.selected {
+            background-color: #333;
+            color: white;
+            border-color: #fff;
+        }
+
+        .size-btn:hover {
+            background-color: #ddd;
+        }
+
+        /* Quantity section */
+        .quantity-section {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .quantity-btn {
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: #f1f1f1;
+            border: 2px solid #333;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .quantity-btn:hover {
+            background-color: #ddd;
+        }
+
+        .quantity-display {
+            margin: 0 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .floating-btn img {
+            width: 40px;
+            height: 40px;
+        }
+
+.checkout-btn {
+    background-color: gray;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block; 
+    width: fit-content;
+    margin-left: auto; 
+    margin-right: auto; 
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.checkout-btn:hover {
+    background-color: #000000;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="header-wrapper">
+        
+        <h1>
+            <a href="EIAA.html">Everyone is an Artist</a>
+            <img src="eiaalogo.png" alt="EIAA Logo">
+        </h1>
+        
+        <!-- Right: Buttons -->
+        <div class="header-buttons">
+            <a href="Apparel.html" onclick="confirmNavigation(event, 'Apparel.html')">Apparels</a>
+            <a href="Artwork.html" onclick="confirmNavigation(event, 'Artwork.html')">Artworks</a>
+            <a href="https://www.facebook.com/EveryoneisanArtist1" onclick="confirmNavigation(event, 'https://www.facebook.com/EveryoneisanArtist1')">Contact Us!</a>
+        </div>
+    </div>
+
+    <div class="clothing-gallery">
+       
+        <div class="clothing-item">
+            <img id="item-image" src="whiteshirt.gif" alt="Astrobear - White">
+            <div class="navigation-buttons">
+                <button class="nav-btn" onclick="previousImage()">Previous</button>
+                <button class="nav-btn" onclick="nextImage()">Next</button>
+            </div>
+        </div>
+
+        
+        <div class="clothing-description">
+            <p>Astrobear $30</p>
+            <p>Break free from your comfort zone and wear the change with Cuz Ynot's first release.</p>
+
+            <!-- Size selection buttons -->
+            <div class="size-buttons">
+                <button class="size-btn" onclick="selectSize(this)">S</button>
+                <button class="size-btn" onclick="selectSize(this)">M</button>
+                <button class="size-btn" onclick="selectSize(this)">L</button>
+                <button class="size-btn" onclick="selectSize(this)">XL</button>
+            </div>
+
+           
+            <div class="quantity-section">
+                <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                <div class="quantity-display" id="quantity-display">1</div>
+                <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+            </div>
+            <div class="checkout-btn">
+                <button class="checkout-btn" onclick="checkOut()">Check Out</button>
+            </div>
+               
+        </div>
+    </div>
+
+    <script>
+        var images = ["whiteshirt.gif", "model2bothshirts.jpg", "model1.jpg"];
+        var currentImageIndex = 0;
+
+        function updateImage() {
+            var imageElement = document.getElementById('item-image');
+            imageElement.src = images[currentImageIndex];
+        }
+
+        function nextImage() {
+            if (currentImageIndex < images.length - 1) {
+                currentImageIndex++;
+                updateImage();
+            }
+        }
+
+        function previousImage() {
+            if (currentImageIndex > 0) {
+                currentImageIndex--;
+                updateImage();
+            }
+        }
+
+        function selectSize(button) {
+            // Remove 'selected' class from all size buttons
+            var allButtons = document.querySelectorAll('.size-btn');
+            allButtons.forEach(function(btn) {
+                btn.classList.remove('selected');
+            });
+
+           
+            button.classList.add('selected');
+        }
+
+        var quantity = 1;
+
+        function changeQuantity(amount) {
+            quantity += amount;
+            if (quantity < 1) quantity = 1; 
+            document.getElementById('quantity-display').innerText = quantity;
+        }
+    </script>
+    
+    <a href="https://www.facebook.com/EveryoneisanArtist1" class="floating-btn" target="_blank">
+        <img src="call.png" alt="Contact Us">
+    </a>
+
+</body>
+</html>

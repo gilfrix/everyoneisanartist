@@ -1,0 +1,145 @@
+body {
+    background-image: url('distort.png');
+    background-color: white;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 70%;
+    margin: 15px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#header h1 {
+    font-size: 5em;
+    color: #black;
+    text-align: center;
+}
+
+#subheader h2 {
+    color: #black;
+    text-align: center;
+    font-size: 3em;
+    margin-top: -10px;
+}
+
+
+.entry {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.entry h2 {
+    color: #black;
+    text-align: left;
+    font-size: 2em;
+    margin-top: 20px;
+    border: none;
+}
+
+.centered-image {
+    display: block;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    width: 200;
+    height: 200;
+
+
+}
+
+#date {
+    border: 1px solid #000000;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+p {
+    color: #black;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 2em;
+    font-family: Times New Roman;
+
+}
+
+a {
+    color: #white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 2px 1px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  align-items: middle;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 1px solid #000000;
+}
+
+.button1:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.button2 {
+  background-color: black;
+  color: white;
+  border: 1px solid #000000;
+}
+
+.button2:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.button3 {
+  background-color: black;
+  color: white;
+  border: 1px solid #000000;
+}
+
+.button3:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+.button4 {
+  background-color: black;
+  color: white;
+  border: 1px solid #000000;
+}
+
+.button4:hover {
+  background-color: #FFFFFF;
+  color: black;
+}
